@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Corona Virus</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}"> 
+</head>
+<body>
+    <!-- Start: Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="mh-logo">
+                <a class="a-logo" href="index.html">
+                    <img src="{{url_for('static', filename = 'images/Logo.svg')}}" width="70%" alt="Data Corona Virus di Indonesia" />
+                </a>
+            </h1>
+            <nav id="drawer" class="main-nav">
+                <button tabindex="0" class="menu-toggle">
+                        <input tabindex="-1" type="checkbox" title="HumbergerMenu" id="toggler">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                </button>
+                <ul class="main-nav-list">
+                    <li class="main-nav-item"><a href="index.html">Beranda</a></li>
+                    <li class="main-nav-item"><a href="tentang-kami.html">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Start: First Section -->
+    <section class="tentang-kami">
+        <div class="tentang-text">
+            <h2>
+                Tentang Website
+            </h2>
+            <p class="desc">
+                Website ini merupakan projek akhir dalam menyelesaikan kelas python yang diadakan oleh KOMINFO. Dibuat oleh:<br><br>
+                <b>Pandji Hidjrat Moko</b> <br>
+                Python - Batch 2 <br><br>
+                Website ini akan menampilkan data kasus Corona Virus yang ada di Indonesia secara real time. API dari data website ini menggunakan API dari <a href="https://kawalcorona.com/">Kawal Corona</a>.
+            </p>
+            <img src="{{url_for('static', filename = 'images/Logo-DTS.svg')}}" width="30%" height="auto" alt="Digital Talent Scholarchip" />
+        </div>
+        <div class="illustration">
+            <img src="{{url_for('static', filename = 'images/illustration.svg')}}" width="70%" alt="Web Development" />
+        </div>
+    </section>
+    <!-- End: First Section -->
+    <script src="../scripts/toggle.js"></script>
+</body>
+</html>

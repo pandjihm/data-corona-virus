@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Corona Virus</title>
+    <meta name="description" content="Data Corona Virus di Indonesia Real Time" />
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}"> 
+</head>
+<body>
+    <!-- Start: Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="mh-logo">
+                <a class="a-logo" href="index.html">
+                    <img src="{{url_for('static', filename = 'images/Logo.svg')}}" width="60%" alt="Data Corona Virus di Indonesia" />
+                </a>
+            </h1>
+            <nav id="drawer" class="main-nav">
+                <button tabindex="0" class="menu-toggle">
+                        <input tabindex="-1" type="checkbox" title="HumbergerMenu" id="toggler" class="check-toggle">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                </button>
+                <ul class="main-nav-list">
+                    <li class="main-nav-item"><a href="index.html">Beranda</a></li>
+                    <li class="main-nav-item"><a href="tentang-kami.html">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Start: Section -->
+    <section>
+        <div class="bg-img">
+            <div z-index="10" class="beranda">
+                <div class="headline">
+                    <h5 tabindex="0" class="h5-space">Real Time</h5>                    
+                    <h1 tabindex="0" class="second">Data Kasus Corona Virus</h1>                  
+                </div>
+                {% for data in data_covid %}
+                <div class="grid-card">
+                    <div class="positif">
+                        <p class="p-label">Positif</p>
+                        <p class="p-data">{{data.positif}}</p>
+                        <p class="p-orang">Orang</p>
+                    </div>
+                    <div class="sembuh">
+                        <p class="p-label">Sembuh</p>
+                        <p class="p-data">{{data.sembuh}}</p>
+                        <p class="p-orang">Orang</p>
+                    </div>
+                    <div class="meninggal">
+                        <p class="p-label">Meninggal</p>
+                        <p class="p-data">{{data.meninggal}}</p>
+                        <p class="p-orang">Orang</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- End: Section -->
+    <script src="../scripts/toggle.js"></script>
+</body>
+</html>
